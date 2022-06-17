@@ -1,0 +1,62 @@
+.login-page {
+    background-image: url('https://media.istockphoto.com/photos/spinning-mixing-and-scratching-in-a-night-club-hands-of-dj-tweak-picture-id948216902?b=1&k=6&m=948216902&s=612x612&w=0&h=suXjoVwImp0rw48fH3dO1bNAwNAqlwPz2Q7ftwI2_Bo=');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-color: black; */
+    height: 100%;
+    /* width: 100%; */
+    padding-top: 20px;
+    padding-bottom: 45%;
+  }
+  
+  .title {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .title h1 {
+    font-size: 50px;
+    display: inline;
+  }
+  
+  .title h2 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-left: 80px;
+    color: rgba(182, 114, 246, 0.855);
+  }
+  
+  .title img, .title-header img{
+  width: 50px;
+  margin-left: 10px;
+  }
+  
+  /* .login-page .page-login-gif {
+    background-image: url(https://gifimage.net/wp-content/uploads/2018/04/ondas-sonoras-gif-8.gif);
+    height: 300px;
+    /* border: red solid 1px; */
+  /* } */ */
+  .container-login input {
+    width: 300px;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  .container-login button:disabled {
+    background-color: rgb(180, 179, 181);
+    color: rgb(56, 52, 52);
+    }
+    
+    .container-login button {
+      width: 200px;
+      height: 30px;
+      margin-top: 20px;
+      background-color: rgba(142, 29, 203, 0.91);
+      color: black;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 5px;
+    }
