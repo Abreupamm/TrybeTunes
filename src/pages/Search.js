@@ -1,5 +1,6 @@
+import './Search.css';
 import React from 'react';
-// import Header from '../components/Header';
+import Header from '../components/Header';
 // import searchAlbumsAPI from '../services/searchAlbumsAPI';
 // import Loading from '../components/Loading';
 // import ResultAlbuns from './ResultAlbuns';
@@ -14,20 +15,20 @@ class Search extends React.Component {
     artistAlbum: '',
   }
 
-//   isButtonDisabld = () => {
-//     const { artistName } = this.state;
-//     if (artistName.length > 1) {
-//       return this.setState({ disabled: false });
-//     }
-//     return this.setState({ disabled: true });
-//   }
+  isButtonDisabld = () => {
+    const { artistName } = this.state;
+    if (artistName.length > 1) {
+      return this.setState({ disabled: false });
+    }
+    return this.setState({ disabled: true });
+  }
 
-//   handleOnChange = (event) => {
-//     const { value } = event.target;
-//     this.setState({ artistName: value }, () => {
-//       this.isButtonDisabld();
-//     });
-//   }
+  handleOnChange = (event) => {
+    const { value } = event.target;
+    this.setState({ artistName: value }, () => {
+      this.isButtonDisabld();
+    });
+  }
 
 //   handleOnClick = async (event) => {
 //     const { name } = event.target;
@@ -42,22 +43,17 @@ class Search extends React.Component {
 //   }
 
   render() {
-    // const {
-    //   disabled,
-    //   artistName,
+    const {
+      disabled,
+      artistName,
     //   click,
     //   returnArtist,
     //   artistAlbum,
     //   listAlbuns,
-    // } = this.state;
-    // if (click) {
-    //   return <Loading />;
-    // }
+    } = this.state;
     return (
-      <div data-testid="page-search">
-        Search
-        {/* <Header />
-        {click ? <Loading /> : (
+      <div className='search-page' data-testid="page-search"> 
+      <Header/>       
           <div className="container-search">
             <input
               value={ artistName }
@@ -75,13 +71,6 @@ class Search extends React.Component {
               Pesquisar
             </button>
           </div>
-        )}
-        {
-          returnArtist && <ResultAlbuns
-            albuns={ listAlbuns }
-            artist={ artistAlbum }
-          />
-        } */}
       </div>
     );
   }

@@ -26,13 +26,13 @@ class Login extends React.Component {
     });
   }
 
-  handleOnClick = async () => {
+  handleOnClick = () => {
     // const { userName } = this.state;
     const { history } = this.props;
-    this.setState({ isLoggedIn: true });
+    // this.setState({ isLoggedIn: true });
     // await createUser({ name: userName });
-    this.setState({ isLoggedIn: false });
-    history.push('/search');
+    // this.setState({ isLoggedIn: false });
+   return history.push('/search');
   }
 
   render() {
@@ -68,7 +68,6 @@ class Login extends React.Component {
                 Entrar
               </button>
             </form>
-            <div className="page-login-gif" />
           </div>
         </div>
       </div>
