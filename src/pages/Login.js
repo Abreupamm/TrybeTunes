@@ -42,32 +42,34 @@ class Login extends React.Component {
     // }
     return (
       <div className="login-page">
-        <div className="title">
-          <h1>Trybe</h1>
-          <img alt="logo" src="https://cdn-icons-png.flaticon.com/512/5885/5885170.png" />
-          <h2>Tunes</h2>
-        </div>
-        <div
-          data-testid="page-login"
-          className="container-login"
-        >
-          <form>
-            <input
-              data-testid="login-name-input"
-              type="text"
-              onChange={ this.handleOnChange }
-            />
-            <br />
-            <button
-              type="button"
-              data-testid="login-submit-button"
-              disabled={ disabled }
-              onClick={ this.handleOnClick }
+        <div className='login'>
+          <div className="title">
+            <h1>Trybe</h1>
+            <img alt="logo" src="https://cdn-icons-png.flaticon.com/512/5885/5885170.png" />
+            <h2>Tunes</h2>
+          </div>
+          <div
+            data-testid="page-login"
+            className="container-login"
             >
-              Entrar
-            </button>
-          </form>
-          <div className="page-login-gif" />
+            <form>
+              <input
+                data-testid="login-name-input"
+                type="text"
+                onChange={ this.handleOnChange }
+                />
+              <br />
+              <button
+                type="button"
+                data-testid="login-submit-button"
+                disabled={ disabled }
+                onClick={ this.handleOnClick }
+                >
+                Entrar
+              </button>
+            </form>
+            <div className="page-login-gif" />
+          </div>
         </div>
       </div>
     );
