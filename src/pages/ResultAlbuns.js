@@ -1,3 +1,4 @@
+import './ResultAlbums.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import CardAlbuns from '../components/CardAlbuns';
