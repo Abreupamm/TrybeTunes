@@ -1,9 +1,9 @@
 import './Search.css';
 import React from 'react';
 import Header from '../components/Header';
-// import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import AlbumsAPI from '../assistant/AlbumsAPI';
 // import Loading from '../components/Loading';
-// import ResultAlbuns from './ResultAlbuns';
+import ResultAlbuns from './ResultAlbuns';
 
 class Search extends React.Component {
   state = {
@@ -30,26 +30,28 @@ class Search extends React.Component {
     });
   }
 
-//   handleOnClick = async (event) => {
-//     const { name } = event.target;
-//     const { artistName } = this.state;
-//     this.setState({ click: true });
-//     const albuns = await searchAlbumsAPI(name);
-//     this.setState({ listAlbuns: albuns });
-//     this.setState({ click: false });
-//     this.setState({ returnArtist: true });
-//     this.setState({ artistAlbum: artistName });
-//     this.setState({ artistName: '' });
-//   }
+  handleOnClick = async (event) => {
+    const { name } = event.target;
+    const { artistName } = this.state;
+    this.setState({ click: true });
+    const albuns = await AlbumsAPI(name);
+    this.setState({ listAlbuns: albuns,
+        click: false,
+        returnArtist: true,
+        artistAlbum: artistName,
+        artistName: '' 
+    });
+
+  }
 
   render() {
     const {
       disabled,
       artistName,
     //   click,
-    //   returnArtist,
-    //   artistAlbum,
-    //   listAlbuns,
+      returnArtist,
+      artistAlbum,
+      listAlbuns,
     } = this.state;
     return (
       <div className='search-page' data-testid="page-search"> 
@@ -71,6 +73,12 @@ class Search extends React.Component {
               Pesquisar
             </button>
           </div>
+          {
+          returnArtist && <ResultAlbuns
+            albuns={ listAlbuns }
+            artist={ artistAlbum }
+          />
+        }
       </div>
     );
   }
